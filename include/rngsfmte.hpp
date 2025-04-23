@@ -145,7 +145,7 @@ namespace RngMTE
       for (size_t i = 0; i < NDW; ++i)
         state[i] = 0x8b8b8b8b;
       for (size_t i = 0; i < NDW + 1; ++i)
-        shuf_seed<false> (i, key[i]);
+        shuf_seed<false> (i, seq[i]);
       for (size_t i = 1; i < NDW + 1; ++i)
         shuf_seed<true> (i);
 
