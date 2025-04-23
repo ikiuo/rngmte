@@ -151,6 +151,8 @@ namespace RngMTE
     static_assert (D <= WMASK, "invalid parameter: D <= (1 << W) - 1");
     static_assert (F <= WMASK, "invalid parameter: F <= (1 << W) - 1");
 
+    static_assert (!FLAG_SIMD || RngMTE_LITTLE_ENDIAN, "unsupported");
+
     /**/
 
     inline static constexpr bool
